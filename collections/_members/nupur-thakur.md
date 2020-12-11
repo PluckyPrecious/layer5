@@ -1,11 +1,15 @@
 ---
 layout: person
 name: Nupur Thakur
-position: MeshMate
-image_path: /assets/images/community/members/nupurthakur27.jpg
+position: Contributor
+image_path: /assets/images/community/members/nupur-thakur.jpg
 github: nupurthakur27
 twitter: nupurthakur27
 blurb: Engineering Student with fascination towards Technology
-meshmate: yes
-date: 01-01-2020
+status: Active
+emeritus: yes
+# domain1: Backend Engineering
+# domain2: DevOps
+# domain3: Community Ambassador
+# timezone: Indian Standard Time (IST)
 ---
