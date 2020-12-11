@@ -1,19 +1,23 @@
 import React from "react";
 
-import ParticleComponent from "../Particle";
 import PageHeaderWrapper from "./pageHeader.style";
+import Image from "../../components/image";
 
-const PageHeader = ({ categories, title, author }) => {
+const PageHeader = ({ categories, title, subtitle,  author, thumbnail, path }) => {
     return (
         <PageHeaderWrapper>
-            <ParticleComponent />
             <div className="page-header">
+                <div className="feature-image">
+                    {thumbnail && (
+                        <Image {...thumbnail} imgStyle={{ objectFit: "contain"}} alt={title}/>
+                    )}</div>
                 <h1>{title}</h1>
+                {subtitle && (<h4>{subtitle}</h4>)}
                 {categories && (
                     <div className="breadcrumbs post">
                         <h4>Tags:</h4>
                         {categories.map((category, index) => (
-                            <span key={index}> {category} </span>
+                            <span key={index}> {category}&nbsp;</span>
                         ))}
                         {author && (
                             <>
@@ -22,10 +26,15 @@ const PageHeader = ({ categories, title, author }) => {
                         )}
                     </div>
                 )}
-                {!categories && title && (
+                {!categories && author && (
+                    <div className="breadcrumbs post">
+                        <h4>By:</h4> <span>{author.name}</span>
+                    </div>
+                )}
+                {!author && path && (
                     <div className="breadcrumbs page">
                         <>
-                            <span> Home </span> <span> {">"} </span> {title}
+                            <span> Home </span> <span> {">"} </span> {path}
                         </>
                     </div>
                 )}

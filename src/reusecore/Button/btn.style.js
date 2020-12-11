@@ -11,12 +11,12 @@ const ButtonStyle = styled.button`
     border: 0; 
     min-width: 170px;
     padding: 14px;
-    border-radius: 3px;
+    border-radius: 5px;
     -webkit-transition: 450ms all;
     transition: 450ms all;
     position: relative;
-    color: ${props => props.theme.primaryColor};
-    background-color: ${props => props.theme.primaryLightColor};
+    color: ${props => props.active ? props.theme.white: props.theme.headingColor};
+    background-color: ${props => props.active ?  props.theme.primaryColor: props.theme.primaryLightColor};
     z-index: 999;
     &:hover,
     &:focus {
@@ -32,21 +32,22 @@ const ButtonStyle = styled.button`
     }
 
     ${props => props.primary && css`
-        color: ${props.theme.primaryLightColor};
-        background: ${props.theme.primaryColor};
+        color: ${props.active ? props.theme.headingColor: props.theme.black};
+        background: ${props.active ? props.theme.highlightLightColor: props.theme.highlightLightColor};
 
         &:hover{
-            color: ${props.theme.primaryColor};
-            background: ${props.theme.primaryLightColor}; 
+            color: ${props.theme.black};
+            background: ${props.theme.highlightColor}; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
         }
     `}
     ${props => props.secondary && css`
-        color: ${props.theme.secondaryColor};
-        background: ${props.theme.secondaryLightColor};
+        color: white; 
+        background: #00b39f; 
 
         &:hover{
-            color: ${props.theme.secondaryLightColor};
-            background: ${props.theme.secondaryColor}; 
+            color: #111111; 
+            background: #00b39f; 
         }
     `}
 `;

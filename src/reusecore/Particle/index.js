@@ -1,11 +1,14 @@
 import React from "react";
 import Particles from "react-particles-js";
 
-import particle1 from "../../assets/images/app/particle/01.png";
-import particle2 from "../../assets/images/app/particle/02.png";
-import particle3 from "../../assets/images/app/particle/03.png";
-import particle4 from "../../assets/images/app/particle/04.png";
-import particle5 from "../../assets/images/app/particle/05.png";
+// import particle1 from "../../assets/images/app/particle/01.png";
+// import particle2 from "../../assets/images/app/particle/02.png";
+// import particle3 from "../../assets/images/app/particle/03.png";
+// import particle4 from "../../assets/images/app/particle/04.png";
+// import particle5 from "../../assets/images/app/particle/05.png";
+import meshery from "../../assets/images/app/projects/meshery-logo-white.png";
+import smp from "../../assets/images/app/projects/smp.png";
+import imagehub from "../../assets/images/app/projects/layer5-image-hub.png";
 
 export default () => (
     <div
@@ -14,7 +17,8 @@ export default () => (
             top: 0,
             left: 0,
             width: "100%",
-            height: "100%"
+            height: "100%",
+            opacity: 0 // Previously -> 0.4
         }}
     >
         <Particles
@@ -22,7 +26,7 @@ export default () => (
             params={{
                 particles: {
                     number: {
-                        value: 2,
+                        value: 3,
                         density: { enable: true, value_area: 800 },
                     },
 
@@ -30,34 +34,37 @@ export default () => (
                         type: ["images"],
                         images: [
                             {
-                                src: `${particle1}`,
-                                width: 170,
-                                height: 150,
+                                src: `${meshery}`,
+                                width: 20,
+                                height: 15,
+                                alt: "meshery-image",
                             },
                             {
-                                src: `${particle2}`,
-                                width: 45,
-                                height: 45,
+                                src: `${smp}`,
+                                width: 30,
+                                height: 15,
+                                alt: "smp-image",
                             },
                             {
-                                src: `${particle3}`,
-                                width: 32,
-                                height: 32,
+                                src: `${imagehub}`,
+                                width: 20,
+                                height: 15,
+                                alt: "imageHub Image"
                             },
-                            {
-                                src: `${particle4}`,
-                                width: 170,
-                                height: 150,
-                            },
-                            {
-                                src: `${particle5}`,
-                                width: 170,
-                                height: 150,
-                            }
+                            // {
+                            //     src: `${smp}`,
+                            //     width: 30,
+                            //     height: 15,
+                            // },
+                            // {
+                            //     src: `${meshery}`,
+                            //     width: 20,
+                            //     height: 15,
+                            // }
                         ],
                     },
                     opacity: {
-                        value: 0.17626369048095938,
+                        value: 0, // Previously -> 0.17626369048095938
                         random: true,
                         anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
                     },

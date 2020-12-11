@@ -3,163 +3,181 @@ import { Link } from "gatsby";
 
 import { Container, Row, Col } from "../../reusecore/Layout";
 
-import { FiMail, FiPhoneCall } from "react-icons/fi";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-
-import logo from "../../assets/images/app/footer/footer-logo.png";
+import logo from "../../assets/images/layer5/layer5-only/svg/layer5-light-bg.svg";
 import particleOne from "../../assets/images/app/footer/footer-particle.png";
-
+import SocialLinks from "../../components/SocialLinks";
+import Button from "../../reusecore/Button";
 import FotterWrapper from "./footer.style";
 
 const Footer = () => {
     return (
         <FotterWrapper>
-            <img className="section__particle one" alt="img" src={particleOne} alt="appion app landing" />
+            <img className="section__particle one" src={particleOne} alt="appion app landing" />
             <Container>
+                <Row className="footer-head">
+                    <Col className="footer-logo-pos" lg={3}>
+                        <Link to="#">
+                            <img src={logo} className="footer-logo" alt="logo" />
+                        </Link>
+                    </Col>
+                    <Col lg={9}>
+                        <div className="links">
+                            <SocialLinks />
+                        </div>
+                    </Col>
+                </Row>
                 <Row>
-                    <Col xs={12} sm={6} lg={3}>
-                        <div className="footer-widgets first">
-                            <Link className="footer-logo" to="#">
-                                <img src={logo} alt="logo" />
-                            </Link>
-                            <ul className="info">
-                                <li>
-                                    <FiMail />
-                                    <Link className="anchor" to="#">
-                    contact@appion.com
-                                    </Link>
-                                </li>
-                                <li>
-                                    <FiPhoneCall />
-                                    <Link className="anchor" to="#">
-                    +88 12345 697858
-                                    </Link>
-                                </li>
-                            </ul>
-
-                            <ul className="social">
-                                <li>
-                                    <Link className="anchor" to="#">
-                                        <FaFacebookF />
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link className="anchor" to="#">
-                                        <FaTwitter />
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link className="anchor" to="#">
-                                        <FaLinkedinIn />
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
+                    <Col lg={3}>
+                        <p className="desc-info">
+                        Representing the largest collection of service meshes and their maintainers in the world, Layer5 is the service mesh company. 
+                            <br /><br />
+                        Creator and maintainer of service mesh standards.
+                            <br /><br />
+                        Maker of Meshery, the service mesh management plane.
+                        </p>    
                     </Col>
-                    <Col xs={12} sm={6} lg={3}>
-                        <div className="footer-widgets">
-                            <h3 className="widget-title">Services</h3>
-                            <ul className="widget-catagory">
-                                <li>
-                                    <Link className="anchor" to="#">
-                    Web Developments
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link className="anchor" to="#">
-                    UX/UI Design
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link className="anchor" to="#">
-                    Graphic Design
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link className="anchor" to="#">
-                    Software Development
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link className="anchor" to="#">
-                    Contact
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </Col>
-                    <Col xs={12} sm={6} lg={3}>
-                        <div className="footer-widgets">
-                            <h3 className="widget-title">About Us</h3>
-                            <ul className="widget-catagory">
-                                <li>
-                                    <Link className="anchor" to="#">
-                    About Us
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link className="anchor" to="#">
-                    Work Portfolio
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link className="anchor" to="#">
-                    Team
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link className="anchor" to="#">
-                    Plan & Pricing
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link className="anchor" to="#">
-                    Company News
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </Col>
-                    <Col xs={12} sm={6} lg={3}>
-                        <div className="footer-widgets">
-                            <h3 className="widget-title">Our Address</h3>
-                            <p>
-                1370 Roosevelt Street, <br />
-                Little York City, New Jersey <br />
-                08834
-                            </p>
-                        </div>
+                    <Col lg={9}>
+                        <Row>
+                            <Col lg={6}>
+                                <Row>
+                                    <Col lg={7}>
+                                        <div className="footer-widgets">
+                                            <h3 className="widget-title">RESOURCES</h3>
+                                            <ul className="widget-catagory">
+                                                <li>
+                                                    <Link className="anchor" to="/landscape#tools">
+                            Service Mesh Tools
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link className="anchor" to="/landscape">
+                            Service Mesh Comparison
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link className="anchor" to="/books">
+                            Service Mesh Books
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link className="anchor" to="/workshops">
+                            Service Mesh Workshops
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </Col>
+                                    <Col lg={5}>
+                                        <div className="footer-widgets">
+                                            <h3 className="widget-title">COMMUNITY</h3>
+                                            <ul className="widget-catagory">
+                                                <li>
+                                                    <Link className="anchor" to="/blog">
+                            Blog
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link className="anchor" to="/community/events">
+                            Events
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link className="anchor" to="/programs">
+                            Programs
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Col>
+                            <Col lg={6}>
+                                <Row>
+                                    <Col lg={7}>
+                                        <div className="footer-widgets">
+                                            <h3 className="widget-title">PROJECTS</h3>
+                                            <ul className="widget-catagory">
+                                                <li>
+                                                    <Link className="anchor" to="/meshery">
+                            Meshery
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link className="anchor" to="/landscape">
+                            Service Mesh Landscape
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link className="anchor" to="/books">
+                            Service Mesh Interface
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link className="anchor" to="/workshops">
+                            Service Mesh Conformace
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </Col>
+                                    <Col lg={5}>
+                                        <div className="footer-widgets">
+                                            <h3 className="widget-title">COMPANY</h3>
+                                            <ul className="widget-catagory">
+                                                <li>
+                                                    <Link className="anchor" to="/news">
+                            News
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link className="anchor" to="/brand">
+                            Brand
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link className="anchor" to="/careers">
+                            Careers
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link className="anchor" to="/partners">
+                            Partners
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link className="anchor" to="/contact">
+                            Contact
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Col>
+                        </Row>
+                        <Row className="subscribe">
+                            <div>
+                                <input type="text" placeholder="Email Address"></input>
+                                <Button secondary title="Subscribe to Newsletter"></Button>
+                            </div>
+                        </Row>
                     </Col>
                 </Row>
                 <div className="footer-bottom">
                     <ul className="footer-menu">
                         <li>
-                            <Link className="anchor" to="#">
+                            <a className="anchor" href="https://meshery.layer5.io/privacy-policy.html">
+                Privacy
+                            </a>
+                        </li>
+                        <li>
+                            <a className="anchor" href="https://meshery.layer5.io/terms-of-service.html">
                 Terms
-                            </Link>
-                        </li>
-                        <li>
-                            <Link className="anchor" to="#">
-                Condition
-                            </Link>
-                        </li>
-                        <li>
-                            <Link className="anchor" to="#">
-                Contact
-                            </Link>
-                        </li>
-                        <li>
-                            <Link className="anchor" to="#">
-                Help
-                            </Link>
+                            </a>
                         </li>
                     </ul>
                     <p className="copyright-text">
-            Copyright @
-                        <Link className="anchor" to="#">
-              Devscorn 
-                        </Link>
-             | All Right Reserved 2020
+            2020 Copyright @Layer5, Inc | All Rights Reserved
                     </p>
                 </div>
             </Container>

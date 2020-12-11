@@ -2,14 +2,13 @@ import React from "react";
 import {ThemeProvider} from "styled-components";
 
 import Layout from "../components/layout"; 
-import SEO from "../components/seo"; 
 
+import SEO from "../components/seo";
 import Navigation from "../sections/Navigation";
 import Banner from "../sections/Banner-default";
-import About from "../sections/About";
 import Features from "../sections/Features";
 import Faq from "../sections/Faq";
-import Integrations from "../sections/Projects";
+import Integrations from "../sections/Projects-home";
 import AppScreens from "../sections/AppScreens";
 import Counters from "../sections/Counters";
 import Pricing from "../sections/Pricing";
@@ -25,11 +24,10 @@ import theme from "../theme/app/themeStyles";
 const IndexPage = () => (
     <ThemeProvider theme={theme}> 
         <GlobalStyle />
+        <SEO meta="Making service meshes available to the rest of us. Open source software for management of service meshes. Allowing developers to focus on business logic, not infrastructure concerns. Empowering operators to confidentally run modern infrastructure."></SEO>
         <Layout>
-            {/* <SEO title="Home" /> */}
             <Navigation />
             <Banner />
-            <About />
             <Integrations />
             <Features />
             <AppScreens />

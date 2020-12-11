@@ -1,0 +1,29 @@
+import styled from "styled-components";
+
+const CareerPageWrapper = styled.div`
+ color: #000;     
+.single-post-wrapper{
+    padding: 50px 0 180px 0;
+}
+.single-post-block{
+    p{
+        font-size: 16px;
+        font-weight: 300; 
+        line-height: 29px;
+        letter-spacing: 0.2px;
+    }
+    h2, h3{
+        margin: 15px 0 10px 0;
+    }
+    p+p{
+        margin-top: 30px;  
+    }
+}
+
+@media only screen and (max-width: 912px) {
+     .single-post-block{
+         padding-bottom: 120px;
+     }
+}
+`;
+export default CareerPageWrapper;

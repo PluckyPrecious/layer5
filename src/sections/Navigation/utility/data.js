@@ -1,3 +1,8 @@
+import img1 from "./img1.svg";
+import img2 from "./layer5-and-istio.png";
+import meshmateLogo from "../../../assets/images/community/meshmate-stack.svg";
+import communityGreen from "../../../assets/images/community/community-green.svg";
+
 const Data = {
     menuItems: [
         {
@@ -5,67 +10,191 @@ const Data = {
             path: "/",
             subItems: [
                 {
-                    name: "Home Default",
-                    path: "/"
+                    name: "Current Home",
+                    path: "/",
+                    sepLine: true
                 },
                 {
-                    name: "Home Classic",
-                    path: "/classic"
+                    name: "Temp Example: Classic",
+                    path: "/classic",
+                    sepLine: true
                 },
                 {
-                    name: "Home Modern",
-                    path: "/modern"
+                    name: "Temp Example: Modern",
+                    path: "/modern",
+                    sepLine: true
                 },
                 {
-                    name: "Home Hosting",
-                    path: "/hosting"
+                    name: "Temp Example: Hosting",
+                    path: "/hosting",
+                    sepLine: true
                 }
-            ]
+            ],
+            actionName: "Home",
+            actionLink: "/",
+            div1: {
+                src: img1,
+                descr: "How I schooled my seniors"
+            },
+            div2: {
+                src: img2,
+                descr: "Service Mesh Istio patterns for multitenancy"
+            }
         },
         {
             name: "Projects",
-            path: "/#projects",
-            offset: "-50"
+            path: "/projects",
+            subItems: [
+                {
+                    name: "Meshery",
+                    path: "/meshery",
+                    sepLine: true
+                },
+                {
+                    name: "Landscape",
+                    path: "/landscape",
+                    sepLine: true
+                },
+                {
+                    name: "Service Mesh Performance",
+                    path: "/projects/service-mesh-performance",
+                    sepLine: true
+                },
+                {
+                    name: "Service Mesh Interface",
+                    path: "/projects/service-mesh-interface-conformance"
+                },
+                {
+                    name: "Image Hub",
+                    path: "/projects/image-hub",
+                    sepLine: true
+                },
+                {
+                    name: "Distributed Performance",
+                    path: "/projects/distributed-performance-management-of-service-meshes",
+                    sepLine: true
+                }
+            ],
+            actionName: "Projects",
+            actionLink: "/projects",
+            div1: {
+                src: img1,
+                descr: "How I schooled my seniors"
+            },
+            div2: {
+                src: img2,
+                descr: "Service Mesh Istio patterns for multilatency"
+            }
         },
         {
-            name: "Features",
-            path: "/#features",
-            offset: "-50"
+            name: "Learn",
+            path: "/learn",
+            subItems: [
+                {
+                    name: "Books",
+                    path: "/learn/books",
+                    sepLine: true
+                },
+                {
+                    name: "Workshops",
+                    path: "/learn/workshops",
+                    sepLine: true
+                }
+            ],
+            actionName: "Learn",
+            actionLink: "/learn",
+            div1: {
+                src: img1,
+                descr: "How I schooled my seniors"
+            },
+            div2: {
+                src: img2,
+                descr: "Service Mesh Istio patterns for multitenancy"
+            }
         },
         {
-            name: "Pricing",
-            path: "/#pricing",
-            offset: "-50"
-        },
-        {
-            name: "Testimonial",
-            path: "/#testimonial",
-            offset: "-50"
-        },
-        {
-            name: "Faq",
-            path: "/#faq",
-            offset: "-50"
+            name: "Community",
+            path: "/community",
+            subItems: [
+                {
+                    name: "Join!",
+                    path: "/community",
+                    sepLine: true
+                },
+                {
+                    name: "Members",
+                    path: "/community/members",
+                    sepLine: true
+                },
+                {
+                    name: "Meshmates",
+                    path: "/community/meshmates",
+                    sepLine: true
+                },
+                // {
+                //     name: "MeshMasters",
+                //     path: "/community/meshmasters"
+                // },
+                // {
+                //     name: "Newcomers",
+                //     path: "/community/newcomers"
+                // },
+                {
+                    name: "Events",
+                    path: "/community/events",
+                    sepLine: true
+                },
+
+            ],
+            actionName: "Meet the community",
+            actionLink: "/community",
+            div1: {
+                src: meshmateLogo,
+                descr: "Meet our MeshMates",
+                path: "/community/meshmates"
+            },
+            div2: {
+                src: communityGreen,
+                descr: "Join the service mesh community",
+                path: "/community"
+            }
         },
         {
             name: "Blog",
-            path: "/blog-grid",
+            path: "/blog",
             subItems: [
                 {
-                    name: "Blog Grid",
-                    path: "/blog-grid"
+                    name: "Blog",
+                    path: "/blog",
+                    sepLine: true
                 },
                 {
-                    name: "Blog List",
-                    path: "/blog-list"
+                    name: "News",
+                    path: "/news",
+                    sepLine: true
                 }
-            ]
+            ],
+            actionName: "Blogs",
+            actionLink: "/blog",
+            div1: {
+                src: img1,
+                descr: "How I schooled my seniors"
+            },
+            div2: {
+                src: img2,
+                descr: "Service Mesh Istio patterns for multilatency"
+            }
         },
         {
-            name: "Contact",
-            path: "/#contact",
+            name: "About",
+            path: "/about",
             offset: "-50"
-        }
+        },
+        // {
+        //     name: "Contact",
+        //     path: "/#contact",
+        //     offset: "-50"
+        // }
     ]
 };
 export default Data;

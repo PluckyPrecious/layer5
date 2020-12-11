@@ -2,25 +2,29 @@ import React from "react";
 import { Link } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
+import slugify from "../../utils/slugify";
+
 import { Container, Row, Col } from "../../reusecore/Layout";
 import PageHeader from "../../reusecore/PageHeader";
-import Sidebar from "../Blog-sidebar";
+import RelatedPosts from "../Related-Posts";
 
 import BlogPageWrapper from "./blogSingle.style";
 
 const BlogSingle = ({data}) => {
-    const { frontmatter, body } = data.mdx;
+    const { frontmatter, body, fields } = data.mdx;
     return (
         <BlogPageWrapper>
             <PageHeader
                 title={frontmatter.title}
-                categories={[frontmatter.tags]}
+                subtitle={frontmatter.subtitle}
+                categories={frontmatter.tags}
                 author={{ name: frontmatter.author }}
+                thumbnail={frontmatter.thumbnail}
             />
             <div className="single-post-wrapper">
                 <Container>
                     <Row>
-                        <Col xs={12} lg={8}>
+                        <Col xs={12} lg={12}>
                             <Row>
                                 <Col xs={12}>
                                     <div className="single-post-block">
@@ -28,8 +32,10 @@ const BlogSingle = ({data}) => {
                                         <div className="post-info-block">
                                             <div className="tags">
                                                 <span>Tags:</span>
-                                                {frontmatter.tags && frontmatter.tags.split(", ").map(tag => (
-                                                    <Link key={`${frontmatter.title}-${tag}`} to="#">{tag}</Link>
+                                                {frontmatter.tags && frontmatter.tags.map(tag => (
+                                                    <Link key={`${frontmatter.title}-${tag}`}
+                                                        to={`/blog/tag/${slugify(tag)}`}>{tag}
+                                                    </Link>
                                                 ))}
                                             </div>
                                         </div>
@@ -37,10 +43,8 @@ const BlogSingle = ({data}) => {
                                 </Col>
                             </Row>
                         </Col>
-                        <Col sm={12} lg={4}>
-                            <Sidebar />
-                        </Col>
                     </Row>
+                    <RelatedPosts tags={frontmatter.tags} currentPostSlug={fields.slug}/>
                 </Container>
             </div>
         </BlogPageWrapper>
